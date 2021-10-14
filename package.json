@@ -42,6 +42,7 @@
     "mocha": "_mocha -b -R spec",
     "test-cov": "nyc npm run mocha",
     "test-coveralls": "nyc npm run mocha && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose",
+    "test-istanbul" : "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "test": "npm run lint && npm run mocha"
   },
   "dependencies": {
