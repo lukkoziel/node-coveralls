@@ -21,7 +21,7 @@ jobs:
         npm install
         npm run lint
         npm install -g istanbul
-        npm run test-istanbul
+        npm run istanbul
 
     - name: Coveralls
       uses: coverallsapp/github-action@master
